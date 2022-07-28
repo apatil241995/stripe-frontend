@@ -5,6 +5,8 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Get_Product } from "../redux/actions";
+import Carousel from "react-material-ui-carousel";
+import { Paper } from "@mui/material";
 
 function Productdetails(productData) {
   const product = {
@@ -26,6 +28,7 @@ function Productdetails(productData) {
   const [price, setPrice] = useState(product['price'])
   const [quantity, setQuantity] = useState(1)
   const dispatch = useDispatch()
+  const checkout_url = "http://127.0.0.1:8000/checkout"
 
   const addQuantity = () => {
     setQuantity(quantity + 1)
@@ -59,7 +62,7 @@ function Productdetails(productData) {
               <ExpandMoreIcon class="sub_quantity" onClick={subQuantity} />
             </div>
           </div>
-          <form action="http://127.0.0.1:8000/checkout">
+          <form action={`${checkout_url}/1/${quantity}`}>
             <button className="buy_button">Buy Now</button>
           </form>
         </div>
@@ -67,20 +70,29 @@ function Productdetails(productData) {
 
       <div className="detailsdiv">
         <div className="detailstext">
-          <h6>{product['category']}</h6>
-          <h1>{product['name']}</h1>
-          <p><h5 className="productdetails">{product['description']}</h5></p>
+          <div className="productcategory">
+            <p>{product['category']}</p>
+          </div>
+          <div className="productname">
+            <p>{product['name']}</p>
+          </div>
+          <div className="productdetails">
+            <p>
+              {product['description']}
+            </p>
+          </div>
         </div>
         <div className="productimages">
           <Carousel
-            autoPlay={false} // <-- You probaly want to disable this for our purposes
-            navButtonsAlwaysVisible
+            navButtonsAlwaysInvisible={true}
+            animation="slide"
+            className="carousel"
           >
-            {image.map((i) => {
-              return (
-                <image scr={i}></image>
-              );
-            })}
+            {
+              image.map((item) =>
+                <img className="carouselimg" src={item} />
+              )
+            }
           </Carousel>
         </div>
       </div>
