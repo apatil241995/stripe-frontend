@@ -1,0 +1,118 @@
+.header {
+  height: 44px;
+  background-color: black;
+  display: flex;
+  color: white;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 18px;
+  display: flex;
+  align-items: center;
+}
+
+.productinfo {
+  width: auto;
+  height: 101px;
+  top: 136px;
+  display: flex;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 21px;
+  color: #666666;
+}
+
+.h5 {
+  width: fit-content;
+  height: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+  border-bottom: 2px solid blue;
+  padding-bottom: 3px;
+}
+
+.h4 {
+  margin: auto;
+}
+
+.detailstext {
+  background-color: rgb(240, 240, 240);
+  width: 50%;
+  height: 500px;
+  border-top: 1px solid black;
+}
+
+.productimages {
+  width: 50%;
+  height: 500px;
+  border-top: 1px solid black;
+  border-left: none;
+}
+
+.detailsdiv {
+  display: flex;
+}
+
+.day {
+  margin-left: 50px;
+}
+
+.time {
+
+  margin-left: 3px;
+}
+
+.contact {
+  position: right;
+  float: right;
+  margin-left: auto;
+  margin-right: 50px;
+}
+
+.price_div {
+  display: flex;
+  margin: auto;
+  color: #000000;
+}
+
+.quantity_button {
+  margin-left: 10px;
+  display: flex;
+  background-color: rgb(240, 240, 240);
+  width: 60px;
+  border-radius: 5px;
+}
+
+.buy_button {
+  margin-left: 10px;
+  border-radius: 20px;
+  width: 100px;
+  height: 40px;
+  background-color: blue;
+  border: none;
+  color: white;
+}
+
+.add_quantity {
+  width: 0.7rem;
+  height: 0.7rem;
+  margin-right: 8px;
+  margin-top: 5px;
+}
+
+.sub_quantity {
+  width: 0.7rem;
+  height: 0.7rem;
+  margin-right: 8px;
+  margin-bottom: 5px;
+}
+
+.quantity {
+  margin: auto;
+  margin-top: 7px;
+  margin-bottom: 5px;
+}
