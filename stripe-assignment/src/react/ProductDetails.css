@@ -12,6 +12,7 @@
   align-items: center;
 }
 
+
 .productinfo {
   width: auto;
   height: 101px;
@@ -25,7 +26,7 @@
   color: #666666;
 }
 
-.h5 {
+.aboutproduct {
   width: fit-content;
   height: fit-content;
   margin-left: 300px;
@@ -185,4 +186,118 @@
 
 
   color: #000000;
+}
+
+@media screen and (max-width:1000px) {
+  .header {
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+  }
+
+  .aboutproduct {
+    position: absolute;
+    width: fit-content;
+    margin-left: 20px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-right: auto;
+    left: 0%;
+    right: 0%;
+    bottom: 5.99%;
+    top: 530px;
+  }
+
+  .price_div {
+    position: absolute;
+    width: fit-content;
+    height: 50px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 20px;
+    margin-right: auto;
+    left: 0%;
+    right: 0%;
+    bottom: 5.99%;
+    top: 630px;
+  }
+
+  .productname {
+    position: absolute;
+    width: 97%;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    height: fit-content;
+    margin-left: 20px;
+    margin-right: auto;
+    left: 0%;
+    right: 0%;
+    bottom: 5.99%;
+    top: 530px;
+  }
+
+  .productimages {
+    position: absolute;
+    width: 97%;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    border: none;
+    left: 0%;
+    right: 0%;
+    bottom: 5.99%;
+    top: 80px;
+
+  }
+
+  .carousel {
+    position: absolute;
+    width: 97%;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    border: none;
+    left: 0%;
+    right: 0%;
+    bottom: 5.99%;
+  }
+
+  .carouselimg {
+    position: absolute;
+    border: none;
+    width: 97%;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0%;
+    right: 0%;
+    bottom: 5.99%;
+  }
+
+  .productcategory {
+    display: none;
+  }
+
+  .detailstext {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    border: none;
+    background-color: white;
+  }
+
+  .productdetails {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    position: absolute;
+    border: none;
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0%;
+    right: 0%;
+    bottom: 5.99%;
+    top: 700px;
+  }
 }

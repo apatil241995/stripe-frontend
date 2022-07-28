@@ -3,13 +3,13 @@
   box-shadow: none;
   align-content: center;
   height: 92px;
-  top: 44px;
+  top: 10%;
 }
 
 .icon {
   width: 3rem;
   height: 3rem;
-  margin-top: 10px;
+  margin-top: 5px;
   margin-left: 250px;
   margin-right: 50px;
   fill: blue;
@@ -26,9 +26,40 @@
   font-family: 'Poppins';
   font-style: normal;
   font-weight: 600;
-  font-size: 18px;
-  line-height: 21px;
+  font-size: 16px;
   display: flex;
   align-items: center;
   text-align: center;
+}
+
+.deicon {
+  width: 3rem;
+  height: 3rem;
+  margin-top: 10px;
+  margin-right: 10px;
+  margin-left: auto;
+  display: none;
+}
+
+@media screen and (max-width:1000px) {
+  .text {
+    display: none;
+    margin-top: 40px;
+  }
+
+  .icon {
+    right: 0%;
+    margin-top: 40px;
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+
+  .deicon {
+    display: flex;
+    margin-top: 40px;
+    margin-right: 10px;
+  }
+
+
+
 }

@@ -3,12 +3,11 @@ import './ProductDetails.css'
 import ExpandLessIcon from '@mui/icons-material/ExpandLess';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { useState, useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { Get_Product } from "../redux/actions";
 import Carousel from "react-material-ui-carousel";
-import { Paper } from "@mui/material";
+import SuccessModel from "./successmodel";
 
-function Productdetails(productData) {
+
+function Productdetails() {
   const product = {
     "name": "Boat Headphones",
     "price": 1000,
@@ -27,8 +26,8 @@ function Productdetails(productData) {
   ]
   const [price, setPrice] = useState(product['price'])
   const [quantity, setQuantity] = useState(1)
-  const dispatch = useDispatch()
   const checkout_url = "http://127.0.0.1:8000/checkout"
+  const [open, setOpen] = useState(false)
 
   const addQuantity = () => {
     setQuantity(quantity + 1)
@@ -39,18 +38,22 @@ function Productdetails(productData) {
   }
 
   useEffect(() => {
-    dispatch(Get_Product())
+    let urlMessage = new URLSearchParams(window.location.search)
+    if (urlMessage.get("success")) {
+      setOpen(true)
+    }
   }, [])
 
   return (
     <div>
+      <SuccessModel open={open} setOpen={setOpen} />
       <div className="header">
         <h6 className="day">Mon-Thus:9:00am-6:30pm</h6>
         <h6 className="contact">Call us: (00)1234 5678</h6>
       </div>
-      <ResponsiveAppBar />
+      <ResponsiveAppBar className="nav" />
       <div className="productinfo">
-        <h5 className="h5">About Product</h5>
+        <h5 className="aboutproduct">About Product</h5>
         <div className="price_div">
           <h4 className="h4">Price: {price * quantity}</h4>
           <div className="quantity_button">
