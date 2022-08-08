@@ -1,4 +1,4 @@
-import productReduser from './reducer'
+import productReduser from '../modules/reducer'
 import { configureStore, applyMiddleware } from '@reduxjs/toolkit'
 import thunk from 'redux-thunk'
 

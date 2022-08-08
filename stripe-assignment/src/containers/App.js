@@ -1,5 +1,6 @@
 import './App.css';
-import Productdetails from './react/ProductDetails';
+import Productdetails from '../componets/ProductDetails/ProductDetails';
+
 
 function App() {
   return (

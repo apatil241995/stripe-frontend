@@ -12,27 +12,13 @@ const ResponsiveAppBar = () => {
     <AppBar position="static" class="navbar">
       <Container maxWidth="xl" class='container'>
         <AndroidIcon class='icon' />
-        <div class='text'>
-          <h5>Laptops</h5>
-        </div>
-        <div class='text'>
-          <h5>Desktop PCs</h5>
-        </div>
-        <div class='text'>
-          <h5>Networking Devices</h5>
-        </div>
-        <div class='text'>
-          <h5>Printers & Scanners</h5>
-        </div>
-        <div class='text'>
-          <h5>PC Parts</h5>
-        </div>
-        <div class='text' >
-          <h5>All Other Products</h5>
-        </div>
-        <div class='text'>
-          <h5>Repairs</h5>
-        </div>
+        <p class='text'>Laptops</p>
+        <p class='text'>Desktop PCs</p>
+        <p class='text'>Networking Devices</p>
+        <p class='text'>Printers & Scanners</p>
+        <p class='text'>PC Parts</p>
+        <p class='text'>All Other Products</p>
+        <p class='text'>Repairs</p>
         <DehazeIcon class="deicon" />
       </Container>
 
